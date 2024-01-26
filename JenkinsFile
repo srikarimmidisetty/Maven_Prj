@@ -8,11 +8,18 @@ pipeline {
 		git branch: 'main', changelog: false, poll: false, url: 'https://github.com/srikarimmidisetty/Maven_Prj.git'
 		}
 		}
+		stage("UNIT TEST")
+		{
+		steps
+		{
+		sh 'cd FirstMaven/ && mvn test '
+		}
+		}
 		stage("MAVEN BUILD")
 		{
 		steps
 		{
-		sh 'cd FirstMaven/ && mvn package '
+		sh 'cd FirstMaven/ && mvn clean package '
 		}
 		}
 		}
