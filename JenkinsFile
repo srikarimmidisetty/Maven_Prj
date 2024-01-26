@@ -33,7 +33,7 @@ pipeline {
 		{
 		steps
 		{
-		sh 'cd FirstMaven/src/main/java/MavenProject && chmod 777 App.java && javac App.java && java App '
+		sh 'cd FirstMaven/src/main/java/MavenProject && chmod 777 App.java && javac App.java && java App.java '
 		}
 		}
 		}
