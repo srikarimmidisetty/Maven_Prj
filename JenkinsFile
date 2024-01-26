@@ -29,8 +29,12 @@ pipeline {
 		sh 'cd FirstMaven/ && mvn clean package '
 		}
 		}
+		stage("RUN MAVEN ")
+		{
+		steps
+		{
+		sh 'FirstMaven/src/main/java/MavenProject && javac App.java && java App '
 		}
 		}
-					
-			
-
+		}
+		}
