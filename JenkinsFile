@@ -15,6 +15,13 @@ pipeline {
 		sh 'cd FirstMaven/ && mvn test '
 		}
 		}
+		stage("Integration Test")
+		{
+		steps
+		{
+		sh 'cd FirstMaven/ && mvn verify '
+		}
+		}
 		stage("MAVEN BUILD")
 		{
 		steps
