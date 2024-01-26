@@ -1,0 +1,22 @@
+pipeline {
+	agent any
+ 	 stages {
+		stage("Git Checkout")
+		{
+		steps
+		{
+		git branch: 'main', changelog: false, poll: false, url: 'https://github.com/srikarimmidisetty/Maven_Prj.git'
+		}
+		}
+		stage("MAVEN BUILD")
+		{
+		steps
+		{
+		sh 'cd Maven_prj/FirstMaven/ && mvn package '
+		}
+		}
+		}
+		}
+					
+			
+
