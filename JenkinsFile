@@ -12,7 +12,7 @@ pipeline {
 		{
 		steps
 		{
-		sh 'cd Maven_prj/FirstMaven/ && mvn package '
+		sh 'cd FirstMaven/ && mvn package '
 		}
 		}
 		}
